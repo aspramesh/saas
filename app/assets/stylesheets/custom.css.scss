@@ -1,15 +1,13 @@
+// Typography Styles
 h1, h2, h3 {
     font-family: 'Open Sans', sans-serif;
 }
 
+// Background & Gradient  
 body, .navbar {  
   background:image-url('body-bg.png');	
 	font-size:15px;	
 	line-height:20px;	
-}
-
-.navbar {	
-  border: none; 
 }
 
 .topgradient {
@@ -24,6 +22,33 @@ body, .navbar {
     background-image: -ms-repeating-linear-gradient(left,rgb(55, 55, 55) 0%,rgba(55, 55, 55, 0) 100%);
 }
 
+// Nav Styles
+.navbar {   
+  border: none;  
+}
+.navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a {
+  color: white;
+  opacity: 0.5;
+  &:hover {
+    color: white;
+    opacity: 1;
+  }
+}
+.navbar-brand {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+.navbar-default .navbar-toggle {
+  border: 2px solid white;
+  &:hover, &:focus {
+     opacity: 0.5;
+  }
+}
+
+// Home Page Styles
 .home-callout {
   color: white;
   margin-top: -20px;
