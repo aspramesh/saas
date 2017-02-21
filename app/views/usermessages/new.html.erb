@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <h3 class="text-center">Contact Us</h3>
+    <div class="col-md-4 col-md-offset-4">
+      <div class="well">
+        <%= form_for @usermessage do |f| %>
+          <div class="form-group">
+            <%= f.label :First_Name %>
+            <%= f.text_field :First_Name, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :Last_Name %>
+            <%= f.text_field :Last_Name, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :Email %>
+            <%= f.text_field :Email, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :Comments %>
+            <%= f.text_area :Comments, class: 'form-control' %>
+          </div>
+          <div align="right">
+            <%= f.submit 'Submit', class: 'btn btn-default btn-primary' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
