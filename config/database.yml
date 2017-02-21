@@ -9,12 +9,12 @@ default: &default
 
 development:
   <<: *default
-  database: saasapp_development
+  database: letsshop_development
 
 test:
   <<: *default
-  database: saasapp_test
+  database: letsshop_test
 
 production:
   <<: *default
-  database: saasapp_production
+  database: letsshop_production
