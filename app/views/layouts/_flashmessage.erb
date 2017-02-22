@@ -1,0 +1,22 @@
+<% flash.each do |type, msg| %>	
+	<% if type == "warning" %>
+		<div class="alert alert-warning fade in">
+    <a href="#" class="close" data-dismiss="alert">&times;</a>
+    <strong>Warning!</strong><br><%= simple_format(msg) %></div>
+	<% end %>
+	<% if type == "danger" %>
+		<div class="alert alert-danger fade in">
+    <a href="#" class="close" data-dismiss="alert">&times;</a>
+    <strong>Error!</strong><br><%= simple_format(msg) %></div>
+	<% end %>
+	<% if type == "success" %>
+		<div class="alert alert-success fade in">
+    <a href="#" class="close" data-dismiss="alert">&times;</a>
+    <strong>Success!</strong><br><%= simple_format(msg) %></div>
+	<% end %>
+	<% if type == "info" %>
+		<div class="alert alert-info fade in">
+    <a href="#" class="close" data-dismiss="alert">&times;</a>
+    <strong>Information!</strong><br><%= simple_format(msg) %></div>
+	<% end %>
+<% end %>  

@@ -1,7 +1,46 @@
 <div class="container">
+  <!-- Content Row -->
   <div class="row">
-    <h3 class="text-center">Contact Us</h3>
-    <div class="col-md-4 col-md-offset-4">
+    <h2 class="text-left">Contact Us</h2>
+      <!-- Map Column -->
+     <div class="col-md-8">
+          <!-- Embedded Google Map -->
+          <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.65866026257!2d144.9654720514915!3d-37.79803847965576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642d6f511aaeb%3A0x937b7d3d157d2b63!2s333+Drummond+St%2C+Carlton+VIC+3053!5e0!3m2!1sen!2sau!4v1487732254377" style="border:0" allowfullscreen></iframe>
+      </div>
+      <!-- Contact Details Column -->
+      <div class="col-md-4">
+          <h3>Contact Details</h3>
+          <p>
+              <Br><h4>Auto-IT</h4>Suit 2, Level 1<br>333 Drummond Street<br>Carlton, VIC 3053<br>
+          </p>
+          <p><i class="fa fa-phone"></i> 
+              <abbr title="Phone">P</abbr>: +61 (0)3 9349 3062</p>
+          <p><i class="fa fa-envelope-o"></i> 
+              <abbr title="Email">E</abbr>: <a href="mailto:support@auto-it.com.au">support@auto-it.com.au</a>
+          </p>
+          <p><i class="fa fa-clock-o"></i> 
+              <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:30 PM</p>
+          <ul class="list-unstyled list-inline list-social-icons">
+              <li>
+                  <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+              </li>
+              <li>
+                  <a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
+              </li>
+              <li>
+                  <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
+              </li>
+              <li>
+                  <a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <!-- /.row -->
+
+  <div class="row">
+    <h3 class="text-left">Send us a Message</h3>
+    <div class="col-md-8">
       <div class="well">
         <%= form_for @usermessage do |f| %>
           <div class="form-group">
@@ -17,11 +56,11 @@
             <%= f.text_field :Email, class: 'form-control' %>
           </div>
           <div class="form-group">
-            <%= f.label :Comments %>
+            <%= f.label :Message %>
             <%= f.text_area :Comments, class: 'form-control' %>
           </div>
           <div align="right">
-            <%= f.submit 'Submit', class: 'btn btn-default btn-primary' %>
+            <%= f.submit 'Send Message', class: 'btn btn-default btn-primary' %>
           </div>
         <% end %>
       </div>
