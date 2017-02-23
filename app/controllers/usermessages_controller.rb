@@ -4,7 +4,12 @@ class UsermessagesController < ApplicationController
 	end
 	def create
 	  @usermessage = Usermessage.new(usermessages_params)
-	  if @usermessage.save	  		
+	  if @usermessage.save	  
+	  		first_name = params[:usermessage][:First_Name]
+	  		last_name = params[:usermessage][:Last_Name]
+				email = params[:usermessage][:Email]
+				body = params[:usermessage][:Comments]
+				ContactMailer.contact_email(first_name, last_name, email, body).deliver	
 	  		flash[:success] = "Message sent."
 	     	redirect_to new_usermessage_path
 	  else	  	 
